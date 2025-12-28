@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navya Bhargavi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- CV DOWNLOAD POPUP -->
+<div id="cv-popup" class="cv-popup">
+    <div class="cv-box">
+        <h3>Download My CV</h3>
+        <p>Please enter your details</p>
+
+        <input type="text" id="cv-name" placeholder="Your Name" required>
+        <input type="email" id="cv-email" placeholder="Your Email" required>
+
+        <div class="cv-actions">
+            <button onclick="submitCV()">Download</button>
+            <button onclick="closeCVPopup()" class="cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<body>
+
+    <!-- 1️⃣ Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">Navya<span>Bhargavi</span></h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+    </nav>
+    <!-- hero section -->
+    <section id="home" class="hero">
+    <div class="hero-left">
+        <p class="welcome">Welcome to my portfolio!</p>
+
+        <h1>Hello, my name’s <span>Navya.</span></h1>
+
+        <p class="subtitle">Aspiring Software engineer | AI/ML Enthusiast</p>
+
+        <div class="hero-buttons">
+          <a href="assests/NavyaBhargavi_resume.pdf"
+     target="_blank"
+     class="btn primary">
+    View Resume
+         </a>
+
+        <a href="#projects" class="btn outline">
+             See My Work
+        </a>
+        </div>
+        <div class="scroll-down">
+            <span>⬇ Scroll down</span>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <div class="image-frame">
+            <img src="images/1758196121104.jpg" alt="Navya Image">
+        </div>
+    </div>
+</section>
+   <section id="skills" class="section skills-section">
+    <h2 class="title">My Skills</h2>
+
+    <table class="skills-table">
+        <!-- ROW 1 -->
+        <tr>
+            <td class="skill-box">
+                <img src="images/HTML.png" alt="HTML Logo">
+                <span>HTML</span>
+            </td>
+            <td class="skill-box">
+                <img src="images/CSS.png" alt="CSS Logo">
+                <span>CSS</span>
+            </td>
+            <td class="skill-box">
+                <img src="images/JavaScript.png" alt="JavaScript Logo">
+                <span>JavaScript</span>
+            </td>
+            <td class="skill-box">
+                <img src="images/react.png" alt="React Logo">
+                <span>React JS</span>
+            </td>
+        </tr>
+
+        <!-- ROW 2 -->
+        <tr>
+            <td class="skill-box">
+                <img src="images/Python.png" alt="Python Logo">
+                <span>Python</span>
+            </td>
+            <td class="skill-box">
+                <img src="images/c.png" alt="C Logo">
+                <span>C Language</span>
+            </td>
+            <td class="skill-box">
+                <img src="images/sql.png" alt="SQL Logo">
+                <span>SQL</span>
+            </td>
+            <td class="skill-box">
+                <img src="images/ml.png" alt="ML Logo">
+                <span>AI / ML Basics</span>
+            </td>
+        </tr>
+    </table>
+</section>
+ 
+<div class="section-divider theme-gradient-soft">
+    <span>LEARNING • BUILDING • GROWING</span>
+</div>
+ <section id="projects" class="section projects-section">
+    <h2 class="title">My Projects</h2>
+
+    <div class="projects-grid">
+    	    <!-- PROJECT 1 -->
+        <div class="project-card">
+            <h3>Weather Forecast App</h3>
+            <div class="project-actions">
+                <a href="https://weather-forecast-app-3nuanzrrtkbja6s8nemxyk.streamlit.app/" target="_blank" class="git-btn">GitHub</a>
+                <button class="desc-btn" onclick="openPopup(this)">Description</button>
+            </div>
+            <div class="small-popup">
+                <span class="close" onclick="closePopup(this)">×</span>
+                <p>Weather app using real-time API data.</p>
+            </div>
+        </div>
+
+	  <!-- PROJECT 2 -->
+        <div class="project-card">
+            <h3>Movie Recommendation System</h3>
+            <div class="project-actions">
+                <a href="https://movierecommendation-4s3jmagimnnuu3tklqstow.streamlit.app/" target="_blank" class="git-btn">GitHub</a>
+                <button class="desc-btn" onclick="openPopup(this)">Description</button>
+            </div>
+            <div class="small-popup">
+                <span class="close" onclick="closePopup(this)">×</span>
+                <p>Recommends movies using similarity-based ML algorithms.</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 3-->
+        <div class="project-card">
+            <h3>Calculator</h3>
+            <div class="project-actions">
+                <a href="https://navyabhargavi17.github.io/Caluculator/" target="_blank" class="git-btn">GitHub</a>
+                <button class="desc-btn" onclick="openPopup(this)">Description</button>
+            </div>
+            <div class="small-popup">
+                <span class="close" onclick="closePopup(this)">×</span>
+                <p>A simple calculator built using HTML, CSS & JavaScript.</p>
+            </div>
+        </div>
+        
+      
+        <!-- PROJECT 4 -->
+        <div class="project-card">
+            <h3>Spotify Song Popularity Prediction</h3>
+            <div class="project-actions">
+                <a href="https://github.com/NavyaBhargavi17/Spotify-Song-Popularity-Predictor" target="_blank" class="git-btn">GitHub</a>
+                <button class="desc-btn" onclick="openPopup(this)">Description</button>
+            </div>
+            <div class="small-popup">
+                <span class="close" onclick="closePopup(this)">×</span>
+                <p>Predicts song popularity using machine learning models.</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 5-->
+        <div class="project-card">
+            <h3>Diabetes Prediction</h3>
+            <div class="project-actions">
+                <a href="https://github.com/NavyaBhargavi17/Diabetes-Prediction-Logistic-Regression" target="_blank" class="git-btn">GitHub</a>
+                <button class="desc-btn" onclick="openPopup(this)">Description</button>
+            </div>
+            <div class="small-popup">
+                <span class="close" onclick="closePopup(this)">×</span>
+                <p>ML model that predicts diabetes risk from medical data.</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 6 -->
+        <div class="project-card">
+            <h3>SMS Spam Detection</h3>
+            <div class="project-actions">
+                <a href="https://github.com/NavyaBhargavi17/sms-spam-naive-bayes" target="_blank" class="git-btn">GitHub</a>
+                <button class="desc-btn" onclick="openPopup(this)">Description</button>
+            </div>
+            <div class="small-popup">
+                <span class="close" onclick="closePopup(this)">×</span>
+                <p>Detects spam messages using NLP techniques.</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 7 -->
+        <div class="project-card">
+            <h3>House Rent Prediction</h3>
+            <div class="project-actions">
+                <a href="https://github.com/NavyaBhargavi17/house-rent-prediction" target="_blank" class="git-btn">GitHub</a>
+                <button class="desc-btn" onclick="openPopup(this)">Description</button>
+            </div>
+            <div class="small-popup">
+                <span class="close" onclick="closePopup(this)">×</span>
+                <p>Predicts house rent based on location and features.</p>
+            </div>
+        </div>
+
+      
+        <!-- MORE PROJECTS (FULL WIDTH) -->
+        <div class="more-projects-wrapper">
+            <a href="https://github.com/NavyaBhargavi17"
+               target="_blank"
+               class="more-projects-box">
+                <h3>More Projects</h3>
+                <p>Explore all my work on GitHub →</p>
+            </a>
+        </div>
+
+    </div>
+</section>
+<section id="about" class="section about-section">
+    <h2 class="title">About Me</h2>
+    
+<div class="about-container">
+    <!-- LEFT: ABOUT TEXT -->
+        <div class="about-text">
+            <p>
+                Hi, I’m <span class="highlight">Navya Bhargavi</span>, a dedicated student and
+                aspiring <span class="highlight">Software Developer</span> with a strong interest
+                in <span class="highlight">AI & Machine Learning</span>.
+            </p>
+
+            <p>
+                I enjoy turning ideas into real-world projects using clean code and logical thinking.
+                I believe in learning by building, and I continuously improve my skills through
+                hands-on practice.
+            </p>
+
+            <p>
+                My goal is to grow as a software engineer and contribute to impactful technology.
+            </p>
+        </div>
+    
+        <!-- RIGHT: INFO CARDS -->
+        <div class="about-cards">
+            <div class="about-card">
+                <h4>🎓 Education</h4>
+                <p>Computer Science Student</p>
+            </div>
+
+            <div class="about-card">
+                <h4>💻 Interests</h4>
+                <p>Full Stack, AI/ML</p>
+            </div>
+
+            <div class="about-card">
+                <h4>🚀 Currently Doing</h4>
+                <p>Building projects & learning daily</p>
+            </div>
+
+            <div class="about-card">
+                <h4>🎯 Career Goal</h4>
+                <p>Become a Software Engineer</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<div class="between-strip">
+    <p class="between-main">
+        I believe consistency and curiosity build great engineers.
+    </p>
+    <p class="between-sub">
+        If my work resonates with you, let’s connect.
+    </p>
+</div>
+<section id="contact" class="section contact-section">
+
+    <h2 class="title">Contact Me</h2>
+
+    <!-- Intro -->
+    <p class="contact-intro">
+        I’m passionate about building meaningful projects and continuously learning new technologies.
+        I’m currently looking for <span>internships, learning opportunities, and collaborations</span>.
+        If you think we can work together, I’d love to hear from you.
+    </p>
+
+    <div class="contact-container">
+
+        <!-- Contact Form -->
+       <form class="contact-form" id="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+
+        <!-- Direct Contact Links -->
+        <div class="contact-links">
+
+            <div class="contact-card">
+               <a href="mailto:kandikondanavyabhargavi@gmail.com"
+                target="_blank"
+                class="'contact-card link-card">
+                <h4>📧 Email</h4>
+                <p>kandikondanavyabhargavi@gmail.com </p>
+                </a>
+            </div>
+
+            <a href="https://www.linkedin.com/in/navya-bhargavi-kandikonda-a2a0a6316/"
+               target="_blank"
+               class="contact-card link-card">
+                <h4>🔗 LinkedIn</h4>
+                <p>Connect professionally</p>
+            </a>
+
+            <a href="https://github.com/NavyaBhargavi17"
+               target="_blank"
+               class="contact-card link-card">
+                <h4>🐙 GitHub</h4>
+                <p>View my projects</p>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+  <footer class="footer">
+
+    <div class="footer-content">
+
+        <!-- Left: Name / Identity -->
+        <div class="footer-brand">
+            <h3>Navya<span>Bhargavi</span></h3>
+            
+        </div>
+
+        <!-- Middle: Quick Links -->
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Right: Socials -->
+        <div class="footer-socials">
+            <a href="https://github.com/NavyaBhargavi17" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/navya-bhargavi-kandikonda-a2a0a6316/" target="_blank">LinkedIn</a>
+            <a href="mailto:kandikondanavyabhargavi@gmail.com">Email</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Navya Bhargavi. Built with passion & consistency.</p>
+    </div>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
